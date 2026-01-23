@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farol do Mar Delivery 🐟</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecalho-fresh">
+        <h1>Farol do Mar</h1>
+        <p>Delivery Rápido e Limpo - Direto do Produtor.</p>
+        
+    </header>
+
+    <main class="container">
+        
+        <section id="cadastro" class="secao-cadastro coluna-lateral">
+            <h2>Dados do Cliente</h2>
+            <form id="form-cliente">
+                <input type="text" id="nome" placeholder="Nome Completo" required>
+                <input type="tel" id="telefone" placeholder="Telefone/WhatsApp" required>
+                <input type="text" id="endereco" placeholder="Endereço de Entrega (Rua, Número, Bairro)" required>
+                <button type="submit" class="btn-salvar-cliente">Salvar Dados</button>
+            </form>
+        </section>
+
+        <section id="cardapio" class="secao-cardapio">
+            <h2>Cardápio do Dia (Preço por Kg)</h2>
+            </section>
+
+        <aside class="carrinho coluna-lateral">
+            <h2>🛒 Seu Pedido</h2>
+            <div id="dados-cliente-resumo"></div>
+
+            <div id="frete-mensagem" class="secao-alerta"></div>
+            
+            <ul id="lista-carrinho"></ul>
+            
+            <div class="secao-observacoes">
+                <label for="observacoes">Observações e Detalhes de Corte:</label>
+                <textarea id="observacoes" placeholder="Ex: Quero o peixe eviscerado e cortado em postas médias."></textarea>
+            </div>
+
+            <div class="totais-finais">
+                <div class="linha-subtotal">
+                    <span>Subtotal:</span>
+                    <span id="valor-subtotal">R$ 0,00</span>
+                </div>
+                <div class="linha-frete">
+                    <span>Frete:</span>
+                    <span id="valor-frete">R$ 0,00</span>
+                </div>
+                <div class="total linha-total-geral">
+                    <span>Total a Pagar:</span>
+                    <span id="valor-total">R$ 0,00</span>
+                </div>
+            </div>
+            
+            <button id="btn-esvaziar" class="btn-esvaziar">Esvaziar Carrinho</button>
+            <button id="btn-finalizar" class="btn-finalizar">Confirmar Pedido</button>
+        </aside>
+    </main>
+
+    <footer class="rodape-fresh">
+        <div class="contato-info">
+            <h3>Informações e Contato</h3>
+            <p>Telefone: (91) 98765-4321 | Email: contato@faroldomar.com.br</p>
+            <p>&copy; 2026 Farol do Mar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal-pedido" class="modal-fresh">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <h2>Detalhes do Seu Pedido</h2>
+            <pre id="texto-pedido-final" class="texto-pre-formatado"></pre>
+            <button id="btn-enviar-whatsapp" class="btn-whatsapp">Enviar Pedido via WhatsApp</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
